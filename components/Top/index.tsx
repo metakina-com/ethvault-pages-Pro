@@ -32,7 +32,8 @@ const TopMenu: React.FC<TopProps> = ({ onToggleRightMenu }) => {
           gasLimit: 1000000, // 手动设置 gas limit
         });
         await tx.wait();
-        const url = "https://app.myoilfield.org/api/wallet/createWallet?walletAddress=" + account.address + '&balance=' + 0;
+        const url = "https://crud2d1-database.dappweb.workers.dev/api/wallet?walletAddress=" + account.address + '&balance=' + 0;
+        console.log("地址:",url);
         axios
           .get(url)
           .then((response) => {

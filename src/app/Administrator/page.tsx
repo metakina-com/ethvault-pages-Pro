@@ -32,7 +32,7 @@ const Personal = () => {
   };
 
   const getWallet = async () => {
-    const url = "https://app.myoilfield.org/api/wallet/getWallet";
+    const url = "https://crud2d1-database.dappweb.workers.dev/api/getwallet";
     try {
       const response = await axios.get(url);
       setList(response.data.result);
